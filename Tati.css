@@ -209,3 +209,22 @@ input[type="number"] {
 .column:last-child {
   min-width: 200px;
 }
+@media screen and (max-width: 600px) {
+  .row {
+      font-size: 0.8em;
+  }
+  .column:last-child {
+      min-width: 100px;
+  }
+  img {
+      width: 80px;
+      height: 80px;
+  }
+  .color {
+      width: 24px;
+      height: 24px;
+  }
+  input[type="number"] {
+      width: 40px;
+  }
+}
