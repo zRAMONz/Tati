@@ -152,12 +152,20 @@ document.addEventListener('DOMContentLoaded', () => {
         input.value = 0;
     });
 
-    // Resetar a cor selecionada
-    const color = row.querySelector('.silver[selected], .gold[selected], .black[selected]');
-    if (color) {
-        color.removeAttribute('selected');
-    }
-
+// Resetar a cor selecionada
+const selectedColor = row.querySelector('.silver[selected], .gold[selected], .black[selected]');
+if (selectedColor) {
+    selectedColor.classList.remove('selected');
+}
+// Resetar o texto de informações
+row.classList.add('reset-text');
+row.addEventListener('animationend', () => {
+    const totalQuantity = row.querySelector('.total-quantity');
+    const totalPrice = row.querySelector('.total-price');
+    totalQuantity.textContent = '';
+    totalPrice.textContent = '';
+    row.classList.remove('reset-text');
+}, { once: true });
 
     // Exibir a mensagem "Adicionado" no canto superior esquerdo da linha
     let addedMessage = row.querySelector('.added-message');
