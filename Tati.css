@@ -251,7 +251,7 @@ body {
       padding: 10px; /* Adicione esta linha */
   }
   .column:last-child {
-      min-width: 130px; /* Altere para 130px */
+      min-width: 105px; /* Altere para 130px */
   }
   img {
       width: 70px; /* Altere para 70px */
@@ -264,7 +264,4 @@ body {
   input[type="number"] {
       width: 35px; /* Altere para 35px */
   }
-}
-.column:nth-child(2) {
-  margin-left: -10px;
 }
