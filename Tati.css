@@ -164,7 +164,7 @@ input[type="number"] {
 }
 
 .color[selected] {
-  box-shadow: 0 0 0 3px #1AA5A5; /* Borda externa */
+  box-shadow: 0 0 0 2px #1AA5A5; /* Borda externa */
   border-radius: 10%;
 }
 
@@ -259,7 +259,7 @@ body {
   }
   .color {
       width: 20px; /* Altere para 20px */
-      height: 20px; /* Altere para 20px */
+      height: 30px; /* Altere para 20px */
   }
   input[type="number"] {
       width: 35px; /* Altere para 35px */
