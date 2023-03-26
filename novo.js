@@ -206,7 +206,7 @@ function handleWhatsApp() {
   const textToCopy = `${summaryContent.textContent}\nTotal da compra: ${totalValue.textContent}`;
 
   // Substitua 1234567890 pelo número de telefone desejado
-  const phoneNumber = "1234567890";
+  const phoneNumber = "551989174080";
   const message = encodeURIComponent(textToCopy);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
