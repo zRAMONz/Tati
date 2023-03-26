@@ -150,13 +150,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Resetar a quantidade do input
         input.value = 0;
-    });
-
-// Resetar a cor selecionada
+          // Remover o unit.price após adicionar o item ao resumo
+  unitPrice.textContent = '';
+        // Resetar a cor selecionada
 const selectedColor = row.querySelector('.silver[selected], .gold[selected], .black[selected]');
 if (selectedColor) {
-    selectedColor.classList.remove('selected');
+  selectedColor.removeAttribute('selected');
 }
+ // Adicionar a classe 'reset-unit-price' à quarta coluna
+ column.classList.add('reset-unit-price');
+
+ // Remover a classe 'reset-unit-price' após a animação
+ row.addEventListener('animationend', () => {
+   column.classList.remove('reset-unit-price');
+ }, { once: true });
+  // Exibir a lista de preços original
+  const colorPriceList = row.querySelector('.color-price');
+  colorPriceList.style.display = 'block';
+    });
+
+
 // Resetar o texto de informações
 row.classList.add('reset-text');
 row.addEventListener('animationend', () => {
@@ -183,4 +196,21 @@ row.addEventListener('animationend', () => {
     addedMessage.timeout = setTimeout(() => {
         addedMessage.style.opacity = 0;
     }, 3000);
+
+    const whatsappButton = document.querySelector('.whatsapp');
+whatsappButton.addEventListener('click', handleWhatsApp);
+
+function handleWhatsApp() {
+  const summaryContent = document.querySelector('.summary-content');
+  const totalValue = document.querySelector('.total-value');
+  const textToCopy = `${summaryContent.textContent}\nTotal da compra: ${totalValue.textContent}`;
+
+  // Substitua 1234567890 pelo número de telefone desejado
+  const phoneNumber = "1234567890";
+  const message = encodeURIComponent(textToCopy);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Abrir o link do WhatsApp em uma nova janela
+  window.open(whatsappUrl, '_blank');
+}
 }})
