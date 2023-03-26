@@ -248,7 +248,7 @@ body {
 @media screen and (max-width: 600px) {
   .row {
       font-size: 0.8em;
-      padding: 10px; /* Adicione esta linha */
+      padding: 12px; /* Adicione esta linha */
   }
   .column:last-child {
       min-width: 105px; /* Altere para 130px */
@@ -264,4 +264,15 @@ body {
   input[type="number"] {
       width: 35px; /* Altere para 35px */
   }
+}
+.color-price {
+  min-height: 60px; /* Adicione esta linha */
+  min-width: 105px;
+}
+.copy + .copy {
+  margin-left: 10px;
+}
+
+.reset-unit-price .unit-price {
+  display: none;
 }
