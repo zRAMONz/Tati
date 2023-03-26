@@ -228,3 +228,40 @@ input[type="number"] {
       width: 40px;
   }
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dffafa;
+  padding: 20px;
+  overflow-x: hidden; /* Adicione esta linha */
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%; /* Adicione esta linha */
+  max-width: 100%; /* Adicione esta linha */
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+      font-size: 0.8em;
+      padding: 10px; /* Adicione esta linha */
+  }
+  .column:last-child {
+      min-width: 130px; /* Altere para 130px */
+  }
+  img {
+      width: 70px; /* Altere para 70px */
+      height: 70px; /* Altere para 70px */
+  }
+  .color {
+      width: 20px; /* Altere para 20px */
+      height: 20px; /* Altere para 20px */
+  }
+  input[type="number"] {
+      width: 35px; /* Altere para 35px */
+  }
+}
