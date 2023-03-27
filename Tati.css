@@ -164,7 +164,7 @@ input[type="number"] {
 }
 
 .color[selected] {
-  box-shadow: 0 0 0 2px #1AA5A5; /* Borda externa */
+  box-shadow: 0 0 0 3px #1AA5A5; /* Borda externa */
   border-radius: 10%;
 }
 
@@ -181,7 +181,6 @@ input[type="number"] {
   font-weight: bold;
   color: #28a745;
   opacity: 0;
-  transition: opacity 0.3s;
 }
 
 /* Exibir a miniatura da foto do produto no resumo da compra */
@@ -240,7 +239,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 18px;
   width: 100%; /* Adicione esta linha */
   max-width: 100%; /* Adicione esta linha */
 }
@@ -276,3 +275,24 @@ body {
 .reset-unit-price .unit-price {
   display: none;
 }
+.size p {
+  font-size: 0.9em; /* Adicione esta linha */
+}
+input[type="number"] {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: right; /* Altere esta linha */
+}
+
+.row.header {
+  font-weight: bold;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.choose-color {
+  grid-column: span 2; /* Adicione esta linha */
+}
+
